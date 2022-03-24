@@ -36,3 +36,9 @@ let people: Person[];
 // Type Inference
 
 let course: string | number = "React - The Complete Guide";
+
+// Functions & Types
+
+function add(a: number, b: number) {
+  return a + b;
+}
