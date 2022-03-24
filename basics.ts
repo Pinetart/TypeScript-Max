@@ -42,3 +42,14 @@ let course: string | number = "React - The Complete Guide";
 function add(a: number, b: number) {
   return a + b;
 }
+
+// Generics
+
+function insertAtBeginning<T>(array: T[], value: T) {
+  const newArray = [value, ...array];
+  return newArray;
+}
+
+const demoArray = [1, 2, 3];
+const updatedAwway = insertAtBeginning(demoArray, -1);
+const stringAwway = insertAtBeginning(["a", "b", "c"], "d");
