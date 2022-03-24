@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 
-const NewTodo = () => {
+const NewTodo: React.FC<{ onAddTodo: (text: string) => void }> = ({
+  onAddTodo,
+}) => {
   const todoTextInputRef = useRef<HTMLInputElement>(null);
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
@@ -10,6 +12,8 @@ const NewTodo = () => {
     if (enteredText.trim().length === 0) {
       return;
     }
+
+    onAddTodo(enteredText);
   };
   return (
     <form onSubmit={submitHandler}>
