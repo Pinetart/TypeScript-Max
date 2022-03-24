@@ -4,6 +4,7 @@ const NewTodo: React.FC<{ onAddTodo: (text: string) => void }> = ({
   onAddTodo,
 }) => {
   const todoTextInputRef = useRef<HTMLInputElement>(null);
+
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
 
