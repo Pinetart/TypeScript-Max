@@ -33,3 +33,7 @@ let people: {
   name: string;
   age: number;
 }[];
+
+// Type Inference
+
+let course = "React - The Complete Guide";
